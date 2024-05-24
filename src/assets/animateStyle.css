@@ -1,0 +1,35 @@
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.scrollable-images {
+  animation: scroll 30s linear infinite;
+} 
+
+.scrollable-images:hover, .scrollable-images:focus {
+  animation-play-state: paused;
+}
+
+.zoomEffect{
+  transition: transform 0.3s ease;
+}
+.zoomEffect:hover{
+  transform:scale(1.05);
+}
+
+.fly-left {
+  animation: flyIn 0.5s ease forwards;
+}
+@keyframes flyIn {
+  from { opacity: 0; transform: translateX(50%);  }
+  to { opacity: 1;  transform: translateX(0); }
+}
+
+.fly-right {
+  animation: flyIn 0.5s ease forwards;
+}
+@keyframes flyIn {
+  from { opacity: 0; transform: translateX(-50%);  }
+  to { opacity: 1;  transform: translateX(0); }
+}
